@@ -160,7 +160,7 @@ namespace InBundleResourceReference.Editor.PipelineJobs
                             }
                             if (!found) continue;
                             var destFolder = Path.GetDirectoryName(filePath.Replace(bundleArtifactPath, outputPath));
-                            var destFileName = Path.GetFileNameWithoutExtension(filePath);
+                            var destFileName = Path.GetFileName(filePath);
                             Directory.CreateDirectory(destFolder);
                             FileUtil.ReplaceFile(filePath, Path.Combine(destFolder, destFileName));
                         }
